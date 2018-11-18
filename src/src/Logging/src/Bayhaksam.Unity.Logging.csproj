@@ -2,19 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>Bayhaksam.Unity API</Description>
-    <Version>0.0.1</Version>
     <Copyright>Copyright © 2016 - 2018 Bayhaksam. All rights reserved.</Copyright>
+    <Description>Bayhaksam.Unity.Logging API</Description>
     <PackageLicenseUrl>https://github.com/bayhaksam/Bayhaksam.Unity/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bayhaksam/Bayhaksam.Unity</PackageProjectUrl>
-    <RepositoryType></RepositoryType>
     <RepositoryUrl>https://github.com/bayhaksam/Bayhaksam.Unity</RepositoryUrl>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\netstandard2.0\Bayhaksam.Unity.xml</DocumentationFile>
     <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>bin\Debug\netstandard2.0\Bayhaksam.Unity.Logging.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
