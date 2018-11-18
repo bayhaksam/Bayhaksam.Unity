@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{238243E7-517
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayhaksam.Unity", "src\src\Bayhaksam.Unity.csproj", "{D287D204-A436-4315-AD63-B7A23C5DC87D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{3BB93C42-D191-44AC-875E-207239977733}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AF5DB8CE-911B-4BBF-87B3-EEA2AF75701E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayhaksam.Unity.Logging", "src\Logging\src\Bayhaksam.Unity.Logging.csproj", "{9C649211-E960-4DB4-8D16-4244F0A8EA57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +23,19 @@ Global
 		{D287D204-A436-4315-AD63-B7A23C5DC87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D287D204-A436-4315-AD63-B7A23C5DC87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D287D204-A436-4315-AD63-B7A23C5DC87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C649211-E960-4DB4-8D16-4244F0A8EA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C649211-E960-4DB4-8D16-4244F0A8EA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C649211-E960-4DB4-8D16-4244F0A8EA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C649211-E960-4DB4-8D16-4244F0A8EA57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D287D204-A436-4315-AD63-B7A23C5DC87D} = {238243E7-5178-4298-BBCB-69EB9743B86C}
+		{3BB93C42-D191-44AC-875E-207239977733} = {238243E7-5178-4298-BBCB-69EB9743B86C}
+		{AF5DB8CE-911B-4BBF-87B3-EEA2AF75701E} = {3BB93C42-D191-44AC-875E-207239977733}
+		{9C649211-E960-4DB4-8D16-4244F0A8EA57} = {AF5DB8CE-911B-4BBF-87B3-EEA2AF75701E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27335403-5C2A-4E4C-8A64-8522ED2D105B}
