@@ -40,8 +40,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		///			<b>UNITY_EDITOR || DEVELOPMENT_BUILD</b></para>
 		/// </summary>
 		/// <param name="message">Message</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void Log(object message)
 		{
 			releaseDebug.Log(message);
@@ -54,8 +53,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// </summary>
 		/// <param name="message">Message</param>
 		/// <param name="context">Context</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void Log(object message, Object context)
 		{
 			releaseDebug.Log(message, context);
@@ -67,8 +65,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		///			<b>UNITY_EDITOR || DEVELOPMENT_BUILD</b></para>
 		/// </summary>
 		/// <param name="message">Message</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogError(object message)
 		{
 			releaseDebug.LogError(message);
@@ -81,8 +78,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// </summary>
 		/// <param name="message">Message</param>
 		/// <param name="context">Context</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogError(object message, Object context)
 		{
 			releaseDebug.LogError(message, context);
@@ -95,8 +91,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// </summary>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogErrorFormat(string format, params object[] args)
 		{
 			releaseDebug.LogErrorFormat(format, args);
@@ -110,8 +105,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// <param name="context">Context</param>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogErrorFormat(Object context, string format, params object[] args)
 		{
 			releaseDebug.LogErrorFormat(context, format, args);
@@ -123,8 +117,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		///			<b>UNITY_EDITOR || DEVELOPMENT_BUILD</b></para>
 		/// </summary>
 		/// <param name="exception">Exception</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogException(System.Exception exception)
 		{
 			releaseDebug.LogException(exception);
@@ -137,8 +130,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// </summary>
 		/// <param name="exception">Exception</param>
 		/// <param name="context">Context</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogException(System.Exception exception, Object context)
 		{
 			releaseDebug.LogException(exception, context);
@@ -151,8 +143,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// </summary>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogFormat(string format, params object[] args)
 		{
 			releaseDebug.LogFormat(format, args);
@@ -166,8 +157,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// <param name="context">Context</param>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogFormat(Object context, string format, params object[] args)
 		{
 			releaseDebug.LogFormat(context, format, args);
@@ -179,8 +169,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		///			<b>UNITY_EDITOR || DEVELOPMENT_BUILD</b></para>
 		/// </summary>
 		/// <param name="message">Message</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarning(object message)
 		{
 			releaseDebug.LogWarning(message);
@@ -193,8 +182,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// </summary>
 		/// <param name="message">Message</param>
 		/// <param name="context">Context</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarning(object message, Object context)
 		{
 			releaseDebug.LogWarning(message, context);
@@ -207,8 +195,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// </summary>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarningFormat(string format, params object[] args)
 		{
 			releaseDebug.LogWarningFormat(format, args);
@@ -222,8 +209,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 		/// <param name="context">Context</param>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarningFormat(Object context, string format, params object[] args)
 		{
 			releaseDebug.LogWarningFormat(context, format, args);

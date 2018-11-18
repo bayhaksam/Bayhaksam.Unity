@@ -7,6 +7,7 @@
 
 namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 {
+	using Bayhaksam.Unity.Logging.DevelopmentBuild;
 	using UnityEngine;
 
 	/// <summary>
@@ -40,11 +41,10 @@ namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 		/// </summary>
 		/// <param name="source">The source</param>
 		/// <param name="message">Message</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void Log(this Object source, object message)
 		{
-			Debug.Log(message, source);
+			debug.Log(message, source);
 		}
 
 		/// <summary>
@@ -54,11 +54,10 @@ namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 		/// </summary>
 		/// <param name="source">The source</param>
 		/// <param name="message">Message</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogError(this Object source, object message)
 		{
-			Debug.LogError(message, source);
+			debug.LogError(message, source);
 		}
 
 		/// <summary>
@@ -69,11 +68,10 @@ namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 		/// <param name="source">The source</param>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogErrorFormat(this Object source, string format, params object[] args)
 		{
-			Debug.LogErrorFormat(source, format, args);
+			debug.LogErrorFormat(source, format, args);
 		}
 
 		/// <summary>
@@ -83,11 +81,10 @@ namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 		/// </summary>
 		/// <param name="source">The source</param>
 		/// <param name="exception">Exception</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogException(this Object source, System.Exception exception)
 		{
-			Debug.LogException(exception, source);
+			debug.LogException(exception, source);
 		}
 
 		/// <summary>
@@ -98,11 +95,10 @@ namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 		/// <param name="source">The source</param>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogFormat(this Object source, string format, params object[] args)
 		{
-			Debug.LogFormat(source, format, args);
+			debug.LogFormat(source, format, args);
 		}
 
 		/// <summary>
@@ -112,11 +108,10 @@ namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 		/// </summary>
 		/// <param name="source">The source</param>
 		/// <param name="message">Message</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarning(this Object source, object message)
 		{
-			Debug.LogWarning(message, source);
+			debug.LogWarning(message, source);
 		}
 
 		/// <summary>
@@ -127,11 +122,10 @@ namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 		/// <param name="source">The source</param>
 		/// <param name="format">Format</param>
 		/// <param name="args">Arguments</param>
-		[System.Diagnostics.Conditional(UnityEditor),
-			System.Diagnostics.Conditional(DevelopmentBuild)]
+		[System.Diagnostics.Conditional(UnityEditor), System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarningFormat(this Object source, string format, params object[] args)
 		{
-			Debug.LogWarningFormat(source, format, args);
+			debug.LogWarningFormat(source, format, args);
 		}
 		#endregion
 	}

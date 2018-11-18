@@ -7,6 +7,7 @@
 
 namespace Bayhaksam.Unity.Extensions
 {
+	using Bayhaksam.Unity.Logging;
 	using UnityEngine;
 
 	/// <summary>
@@ -23,7 +24,7 @@ namespace Bayhaksam.Unity.Extensions
 		/// <param name="message">Message</param>
 		public static void Log(this Object source, object message)
 		{
-			Debug.Log(message, source);
+			debug.Log(message, source);
 		}
 
 		/// <summary>
@@ -35,7 +36,7 @@ namespace Bayhaksam.Unity.Extensions
 		/// <param name="message">Message</param>
 		public static void LogError(this Object source, object message)
 		{
-			Debug.LogError(message, source);
+			debug.LogError(message, source);
 		}
 
 		/// <summary>
@@ -48,7 +49,7 @@ namespace Bayhaksam.Unity.Extensions
 		/// <param name="args">Arguments</param>
 		public static void LogErrorFormat(this Object source, string format, params object[] args)
 		{
-			Debug.LogErrorFormat(source, format, args);
+			debug.LogErrorFormat(source, format, args);
 		}
 
 		/// <summary>
@@ -60,7 +61,7 @@ namespace Bayhaksam.Unity.Extensions
 		/// <param name="exception">Exception</param>
 		public static void LogException(this Object source, System.Exception exception)
 		{
-			Debug.LogException(exception, source);
+			debug.LogException(exception, source);
 		}
 
 		/// <summary>
@@ -73,7 +74,7 @@ namespace Bayhaksam.Unity.Extensions
 		/// <param name="args">Arguments</param>
 		public static void LogFormat(this Object source, string format, params object[] args)
 		{
-			Debug.LogFormat(source, format, args);
+			debug.LogFormat(source, format, args);
 		}
 
 		/// <summary>
@@ -85,7 +86,7 @@ namespace Bayhaksam.Unity.Extensions
 		/// <param name="message">Message</param>
 		public static void LogWarning(this Object source, object message)
 		{
-			Debug.LogWarning(message, source);
+			debug.LogWarning(message, source);
 		}
 
 		/// <summary>
@@ -98,7 +99,7 @@ namespace Bayhaksam.Unity.Extensions
 		/// <param name="args">Arguments</param>
 		public static void LogWarningFormat(this Object source, string format, params object[] args)
 		{
-			Debug.LogWarningFormat(source, format, args);
+			debug.LogWarningFormat(source, format, args);
 		}
 	}
 }
