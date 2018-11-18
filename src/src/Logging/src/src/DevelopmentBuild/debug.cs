@@ -7,6 +7,7 @@
 
 namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 {
+	using Bayhaksam.Extensions;
 	using UnityEngine;
 
 	/// <summary>
@@ -43,7 +44,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void Log(object message)
 		{
-			Debug.Log(message);
+			Debug.Log(message.ToString().AppendNewLineEnd());
 		}
 
 		/// <summary>
@@ -57,7 +58,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void Log(object message, Object context)
 		{
-			Debug.Log(message, context);
+			Debug.Log(message.ToString().AppendNewLineEnd(), context);
 		}
 
 		/// <summary>
@@ -70,7 +71,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogError(object message)
 		{
-			Debug.LogError(message);
+			Debug.LogError(message.ToString().AppendNewLineEnd());
 		}
 
 		/// <summary>
@@ -84,7 +85,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogError(object message, Object context)
 		{
-			Debug.LogError(message, context);
+			Debug.LogError(message.ToString().AppendNewLineEnd(), context);
 		}
 
 		/// <summary>
@@ -98,7 +99,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogErrorFormat(string format, params object[] args)
 		{
-			Debug.LogErrorFormat(format, args);
+			Debug.LogError(string.Format(format, args).AppendNewLineEnd());
 		}
 
 		/// <summary>
@@ -113,7 +114,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogErrorFormat(Object context, string format, params object[] args)
 		{
-			Debug.LogErrorFormat(context, format, args);
+			Debug.LogError(string.Format(format, args).AppendNewLineEnd(), context);
 		}
 
 		/// <summary>
@@ -154,7 +155,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogFormat(string format, params object[] args)
 		{
-			Debug.LogFormat(format, args);
+			Debug.Log(string.Format(format, args).AppendNewLineEnd());
 		}
 
 		/// <summary>
@@ -169,7 +170,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogFormat(Object context, string format, params object[] args)
 		{
-			Debug.LogFormat(context, format, args);
+			Debug.Log(string.Format(format, args).AppendNewLineEnd(), context);
 		}
 
 		/// <summary>
@@ -196,7 +197,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarning(object message, Object context)
 		{
-			Debug.LogWarning(message, context);
+			Debug.LogWarning(message.ToString().AppendNewLineEnd(), context);
 		}
 
 		/// <summary>
@@ -210,7 +211,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarningFormat(string format, params object[] args)
 		{
-			Debug.LogWarningFormat(format, args);
+			Debug.LogWarning(string.Format(format, args).AppendNewLineEnd());
 		}
 
 		/// <summary>
@@ -225,7 +226,7 @@ namespace Bayhaksam.Unity.Logging.DevelopmentBuild
 			System.Diagnostics.Conditional(DevelopmentBuild)]
 		public static void LogWarningFormat(Object context, string format, params object[] args)
 		{
-			Debug.LogWarningFormat(context, format, args);
+			Debug.LogWarning(string.Format(format, args).AppendNewLineEnd(), context);
 		}
 		#endregion
 	}

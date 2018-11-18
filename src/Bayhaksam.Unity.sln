@@ -27,6 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{29CE54A2-57E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayhaksam.Unity.Extensions", "src\Extensions\src\Bayhaksam.Unity.Extensions.csproj", "{5458CBCD-B05B-4AC0-837A-D5FB49895641}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bayhaksam", "Bayhaksam", "{60320603-6187-46D6-B068-7E98EFA86AB5}"
+	ProjectSection(SolutionItems) = preProject
+		lib\Bayhaksam\Bayhaksam.Extensions.dll = lib\Bayhaksam\Bayhaksam.Extensions.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +63,7 @@ Global
 		{F3E60068-9911-4E1C-863A-3A3417FC2D9A} = {238243E7-5178-4298-BBCB-69EB9743B86C}
 		{29CE54A2-57EC-450E-8545-6EB02D04C0CC} = {F3E60068-9911-4E1C-863A-3A3417FC2D9A}
 		{5458CBCD-B05B-4AC0-837A-D5FB49895641} = {29CE54A2-57EC-450E-8545-6EB02D04C0CC}
+		{60320603-6187-46D6-B068-7E98EFA86AB5} = {9A18EBCF-39AA-4414-B19E-2779D2CA5F82}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27335403-5C2A-4E4C-8A64-8522ED2D105B}
