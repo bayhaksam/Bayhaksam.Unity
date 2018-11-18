@@ -5,7 +5,7 @@
 // <author>Samet Kurumahmut</author>
 //-----------------------------------------------------------------------
 
-namespace Bayhaksam.Unity.Log
+namespace Bayhaksam.Unity.Logging
 {
 	using System;
 	using UnityEngine;
