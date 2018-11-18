@@ -7,7 +7,7 @@
 
 namespace Bayhaksam.Unity.Extensions.DevelopmentBuild
 {
-	using Bayhaksam.Unity.Logging.DevelopmentBuild;
+	using Bayhaksam.Unity.Logging;
 	using UnityEngine;
 
 	/// <summary>
