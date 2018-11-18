@@ -17,6 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Logging\src\Bayhaksam.Unity.Logging.csproj" />
     <ProjectReference Include="..\..\src\Bayhaksam.Unity.csproj" />
   </ItemGroup>
 
