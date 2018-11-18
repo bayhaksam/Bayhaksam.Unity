@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>Bayhaksam.Unity API</Description>
     <Version>0.0.1</Version>
-    <Copyright>Copyright © 2016 - 2018 Bayhaksam. All rights reserved.</Copyright>
+    <Copyright>Copyright © 2015 - 2018 Bayhaksam. All rights reserved.</Copyright>
     <PackageLicenseUrl>https://github.com/bayhaksam/Bayhaksam.Unity/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bayhaksam/Bayhaksam.Unity</PackageProjectUrl>
     <RepositoryType></RepositoryType>
