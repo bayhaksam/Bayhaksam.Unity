@@ -5,7 +5,7 @@
 // <author>Samet Kurumahmut</author>
 //-----------------------------------------------------------------------
 
-namespace Bayhaksam.Unity
+namespace Bayhaksam.Unity.Behaviour
 {
 	using UnityEngine;
 
