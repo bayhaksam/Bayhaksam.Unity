@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="OnStart.cs" company="Bayhaksam">
+// <copyright file="OnStartBehaviour.cs" company="Bayhaksam">
 //      Copyright (c) Bayhaksam. All rights reserved.
 // </copyright>
 // <author>Samet Kurumahmut</author>
@@ -10,7 +10,7 @@ namespace Bayhaksam.Unity.Behaviour
 	using UnityEngine;
 	using UnityEngine.Events;
 
-	public class OnStart : MonoBehaviour
+	public class OnStartBehaviour : MonoBehaviour
 	{
 		#region Unity Events
 		public UnityEvent OnStartInvoked;
