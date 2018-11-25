@@ -13,7 +13,7 @@ namespace Bayhaksam.Unity.Behaviour
 	{
 		#region Unity Fields
 		[SerializeField]
-		GameObject go;
+		GameObject target;
 
 		[SerializeField]
 		bool isReversed;
@@ -26,20 +26,20 @@ namespace Bayhaksam.Unity.Behaviour
 			set { this.isReversed = value; }
 		}
 
-		public GameObject GameObject
+		public GameObject Target
 		{
 			get
 			{
-				if (this.go != null)
+				if (this.target != null)
 				{
-					return this.go;
+					return this.target;
 				}
 
-				return this.go = this.gameObject;
+				return this.target = this.gameObject;
 			}
 			set
 			{
-				this.go = value;
+				this.target = value;
 			}
 		}
 		#endregion
@@ -47,7 +47,7 @@ namespace Bayhaksam.Unity.Behaviour
 		#region Public Methods
 		public void Execute(bool value)
 		{
-			this.GameObject.SetActive(!this.IsReversed ? value : !value);
+			this.Target.SetActive(!this.IsReversed ? value : !value);
 		}
 		#endregion
 	}
