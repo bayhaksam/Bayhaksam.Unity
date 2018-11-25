@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unity", "Unity", "{7C37F38E
 	ProjectSection(SolutionItems) = preProject
 		lib\Unity\UnityEditor.dll = lib\Unity\UnityEditor.dll
 		lib\Unity\UnityEngine.dll = lib\Unity\UnityEngine.dll
+		lib\Unity\UnityEngine.UI.dll = lib\Unity\UnityEngine.UI.dll
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{F3E60068-9911-4E1C-863A-3A3417FC2D9A}"
@@ -31,6 +32,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bayhaksam", "Bayhaksam", "{
 	ProjectSection(SolutionItems) = preProject
 		lib\Bayhaksam\Bayhaksam.Extensions.dll = lib\Bayhaksam\Bayhaksam.Extensions.dll
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{88C085F8-081B-4E38-9633-E3641FA02D1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FD2F644B-A983-43F0-AB87-32B0304B9511}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayhaksam.Unity.UI", "src\UI\src\Bayhaksam.Unity.UI.csproj", "{62B7C4B8-A2FB-463C-9939-876D828AD8B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +57,10 @@ Global
 		{5458CBCD-B05B-4AC0-837A-D5FB49895641}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5458CBCD-B05B-4AC0-837A-D5FB49895641}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5458CBCD-B05B-4AC0-837A-D5FB49895641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B7C4B8-A2FB-463C-9939-876D828AD8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B7C4B8-A2FB-463C-9939-876D828AD8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B7C4B8-A2FB-463C-9939-876D828AD8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B7C4B8-A2FB-463C-9939-876D828AD8B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +75,9 @@ Global
 		{29CE54A2-57EC-450E-8545-6EB02D04C0CC} = {F3E60068-9911-4E1C-863A-3A3417FC2D9A}
 		{5458CBCD-B05B-4AC0-837A-D5FB49895641} = {29CE54A2-57EC-450E-8545-6EB02D04C0CC}
 		{60320603-6187-46D6-B068-7E98EFA86AB5} = {9A18EBCF-39AA-4414-B19E-2779D2CA5F82}
+		{88C085F8-081B-4E38-9633-E3641FA02D1C} = {238243E7-5178-4298-BBCB-69EB9743B86C}
+		{FD2F644B-A983-43F0-AB87-32B0304B9511} = {88C085F8-081B-4E38-9633-E3641FA02D1C}
+		{62B7C4B8-A2FB-463C-9939-876D828AD8B5} = {FD2F644B-A983-43F0-AB87-32B0304B9511}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27335403-5C2A-4E4C-8A64-8522ED2D105B}
