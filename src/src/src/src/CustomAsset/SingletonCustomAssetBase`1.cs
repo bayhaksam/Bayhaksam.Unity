@@ -7,8 +7,8 @@
 
 namespace Bayhaksam.Unity.CustomAsset
 {
+	using Bayhaksam.Unity.Utils;
 	using System;
-	using System.Linq;
 	using UnityEngine;
 
 	public abstract class SingletonCustomAssetBase<T> : ScriptableObject where T : SingletonCustomAssetBase<T>
@@ -31,7 +31,7 @@ namespace Bayhaksam.Unity.CustomAsset
 		/// Gets value for lazy initialization.
 		/// </summary>
 		protected static Lazy<T> LazyInstance { get; private set; }
-			= new Lazy<T>(() => Resources.FindObjectsOfTypeAll<T>().FirstOrDefault());
+			= new Lazy<T>(() => ResourcesUtil.FindObjectOfType<T>());
 		#endregion
 	}
 }
