@@ -31,7 +31,7 @@ namespace Bayhaksam.Unity.CustomAsset
 		/// Gets value for lazy initialization.
 		/// </summary>
 		protected static Lazy<T> LazyInstance { get; private set; }
-			= new Lazy<T>(() => ResourcesUtil.FindObjectOfType<T>());
+			= new Lazy<T>(() => ResourcesUtil.FindObjectOfType<T>() ?? CreateInstance<T>());
 		#endregion
 	}
 }
