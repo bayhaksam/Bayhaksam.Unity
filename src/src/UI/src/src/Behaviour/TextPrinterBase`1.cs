@@ -18,6 +18,7 @@ namespace Bayhaksam.Unity.UI.Behaviour
 		#endregion
 
 		#region Properties
+		/// <inheritdoc/>
 		public virtual Text Text
 		{
 			get { return this.text; }
@@ -26,6 +27,7 @@ namespace Bayhaksam.Unity.UI.Behaviour
 		#endregion
 
 		#region Public Methods
+		/// <inheritdoc/>
 		public abstract void Execute(T value);
 		#endregion
 	}
