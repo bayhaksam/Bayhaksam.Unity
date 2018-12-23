@@ -15,6 +15,9 @@ namespace Bayhaksam.Unity.Behaviour
 		#region Fields
 		#region Unity Fields
 		[SerializeField]
+		bool isCountDown;
+
+		[SerializeField]
 		float tick = 1.0f;
 
 		[SerializeField]
@@ -51,6 +54,12 @@ namespace Bayhaksam.Unity.Behaviour
 		#endregion
 
 		#region Properties
+		public bool IsCountdown
+		{
+			get { return this.isCountDown; }
+			set { this.isCountDown = value; }
+		}
+
 		public bool IsRunning { get; private set; }
 
 		public float CurrentTime { get; private set; }
@@ -67,7 +76,7 @@ namespace Bayhaksam.Unity.Behaviour
 
 				if (this.currentTick <= 0.0f)
 				{
-					this.OnTimerTickInternal();
+					this.OnTimerTick();
 				}
 			}
 		}
@@ -77,7 +86,7 @@ namespace Bayhaksam.Unity.Behaviour
 		public virtual void ResetValues()
 		{
 			this.currentTick = this.tick;
-			this.CurrentTime = 0;
+			this.CurrentTime = !this.IsCountdown ? 0 : this.Time;
 			this.OnReset.Invoke();
 		}
 
@@ -98,8 +107,39 @@ namespace Bayhaksam.Unity.Behaviour
 		}
 		#endregion
 
+		#region Protected Methods
+		protected virtual void OnTimerTick()
+		{
+			if (!this.IsCountdown)
+			{
+				this.OnForwardTick();
+
+				return;
+			}
+
+			this.OnBackwardTick();
+		}
+		#endregion
+
 		#region Methods
-		protected virtual void OnTimerTickInternal()
+		void OnBackwardTick()
+		{
+			this.CurrentTime -= this.tick;
+			this.OnTick.Invoke();
+
+			if (this.CurrentTime > 0)
+			{
+				this.currentTick = this.tick;
+
+				return;
+			}
+
+			// On timer end
+			this.Stop();
+			this.OnFinished.Invoke();
+		}
+
+		void OnForwardTick()
 		{
 			this.CurrentTime += this.tick;
 			this.OnTick.Invoke();
