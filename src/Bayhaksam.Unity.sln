@@ -30,6 +30,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bayhaksam.Unity.Extensions"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bayhaksam", "Bayhaksam", "{60320603-6187-46D6-B068-7E98EFA86AB5}"
 	ProjectSection(SolutionItems) = preProject
+		lib\Bayhaksam\Bayhaksam.dll = lib\Bayhaksam\Bayhaksam.dll
 		lib\Bayhaksam\Bayhaksam.Extensions.dll = lib\Bayhaksam\Bayhaksam.Extensions.dll
 	EndProjectSection
 EndProject

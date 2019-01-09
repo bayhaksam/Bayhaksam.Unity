@@ -7,6 +7,7 @@
 
 namespace Bayhaksam.Unity.Audio.Behaviour
 {
+	using Bayhaksam.Audio;
 	using UnityEngine;
 
 	public class AudioSourcesMuter : MonoBehaviour, IMuter
