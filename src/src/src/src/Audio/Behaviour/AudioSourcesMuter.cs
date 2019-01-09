@@ -9,7 +9,7 @@ namespace Bayhaksam.Unity.Audio.Behaviour
 {
 	using UnityEngine;
 
-	public class AudioSourcesMuter : IMuter
+	public class AudioSourcesMuter : MonoBehaviour, IMuter
 	{
 		/// <inheritdoc/>
 		public virtual void Mute()
