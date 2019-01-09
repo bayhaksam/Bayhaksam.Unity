@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Bayhaksam">
+      <HintPath>..\..\lib\Bayhaksam\Bayhaksam.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\lib\Unity\UnityEngine.dll</HintPath>
     </Reference>
