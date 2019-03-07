@@ -115,7 +115,10 @@ namespace Bayhaksam.Unity.UI.Behaviour
 
 		protected virtual void OnEnable()
 		{
-			this.Animator?.Play(this.AlertOpenAnimationStateNameHash);
+			if (this.Animator != null)
+			{
+				this.Animator.Play(this.AlertOpenAnimationStateNameHash);
+			}
 		}
 		#endregion
 
