@@ -15,6 +15,16 @@ namespace Bayhaksam.Unity.UI.Extensions
 	/// </summary>
 	public static class SelectableExt
 	{
+		public static void InverseInteractable(this Selectable source)
+		{
+			source.interactable = !source.interactable;
+		}
+
+		public static void InverseInteractable(this Selectable source, bool value)
+		{
+			source.interactable = !value;
+		}
+
 		public static void SetColors(
 			this Selectable source,
 			Color disabledColor,
