@@ -9,6 +9,11 @@
             Extensions for <see cref="T:System.Char"/> class.
             </summary>
         </member>
+        <member name="T:Bayhaksam.Extensions.DateTimeExt">
+            <summary>
+            <see cref="T:System.DateTime"/>' s extension class
+            </summary>
+        </member>
         <member name="T:Bayhaksam.Extensions.EnumExt">
             <summary>
             <see cref="T:System.Enum"/>' s extension class

@@ -7,6 +7,7 @@
 
 namespace Bayhaksam.Unity
 {
+	using Bayhaksam.Extensions;
 	using System;
 	using UnityEngine;
 
@@ -48,15 +49,13 @@ namespace Bayhaksam.Unity
 
 		#region ISerializationCallbackReceiver Methods
 		/// <inheritdoc/>
-		public void OnAfterDeserialize()
-		{
-			DateTime.TryParse(this.value, out DateTime val);
-
-			this.Value = val;
-		}
+		public void OnAfterDeserialize() =>
+			this.Value = !string.IsNullOrEmpty(this.value)
+				? DateTime.ParseExact(this.value, "yyyyMMddHHmmssfffffff", null)
+				: DateTime.MinValue;
 
 		/// <inheritdoc/>
-		public void OnBeforeSerialize() => this.value = this.Value.ToString();
+		public void OnBeforeSerialize() => this.value = this.Value.ToLongTimeStampString();
 		#endregion
 
 		#region object Methods
