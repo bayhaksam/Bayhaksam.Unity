@@ -7,6 +7,7 @@
 
 namespace Bayhaksam.Unity
 {
+	using Bayhaksam.Extensions;
 	using System;
 	using UnityEngine;
 
@@ -50,13 +51,11 @@ namespace Bayhaksam.Unity
 		/// <inheritdoc/>
 		public void OnAfterDeserialize()
 		{
-			DateTime.TryParse(this.value, out DateTime val);
-
-			this.Value = val;
+			this.Value = DateTime.ParseExact(this.value, "yyyyMMddHHmmssfffffff", null);
 		}
 
 		/// <inheritdoc/>
-		public void OnBeforeSerialize() => this.value = this.Value.ToString();
+		public void OnBeforeSerialize() => this.value = this.Value.ToLongTimeStampString();
 		#endregion
 
 		#region object Methods
