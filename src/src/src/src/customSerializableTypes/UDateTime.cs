@@ -49,10 +49,10 @@ namespace Bayhaksam.Unity
 
 		#region ISerializationCallbackReceiver Methods
 		/// <inheritdoc/>
-		public void OnAfterDeserialize()
-		{
-			this.Value = DateTime.ParseExact(this.value, "yyyyMMddHHmmssfffffff", null);
-		}
+		public void OnAfterDeserialize() =>
+			this.Value = !string.IsNullOrEmpty(this.value)
+				? DateTime.ParseExact(this.value, "yyyyMMddHHmmssfffffff", null)
+				: DateTime.MinValue;
 
 		/// <inheritdoc/>
 		public void OnBeforeSerialize() => this.value = this.Value.ToLongTimeStampString();
