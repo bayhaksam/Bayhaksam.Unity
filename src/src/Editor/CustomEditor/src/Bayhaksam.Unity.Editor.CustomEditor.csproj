@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1</Version>
+    <Description>Bayhaksam.Unity.Editor.CustomEditor API</Description>
+    <Copyright>Copyright © 2015 - 2018 Bayhaksam. All rights reserved.</Copyright>
+    <PackageLicenseUrl>https://github.com/bayhaksam/Bayhaksam.Unity/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/bayhaksam/Bayhaksam.Unity</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bayhaksam/Bayhaksam.Unity</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\Bayhaksam.Unity.Editor.CustomEditor.xml</DocumentationFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
