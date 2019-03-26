@@ -1,4 +1,11 @@
-﻿namespace Bayhaksam.Unity
+﻿//-----------------------------------------------------------------------
+// <copyright file="UDateTime.cs" company="Bayhaksam">
+//      Copyright (c) Bayhaksam. All rights reserved.
+// </copyright>
+// <author>Samet Kurumahmut</author>
+//-----------------------------------------------------------------------
+
+namespace Bayhaksam.Unity
 {
 	using System;
 	using UnityEngine;
