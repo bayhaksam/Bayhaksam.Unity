@@ -15,6 +15,11 @@ namespace Bayhaksam.Unity.Logging
 	/// </summary>
 	public class debug
 	{
+		#region Properties
+		public static bool IsContextInfoWillBePrinted { get; set; }
+		#endregion
+
+		#region Public Methods
 		/// <summary>
 		///		<para>Logs message to the Unity Console.</para>
 		///		<para>System.Diagnostics.Conditional:
@@ -35,7 +40,7 @@ namespace Bayhaksam.Unity.Logging
 		/// <param name="context">Context</param>
 		public static void Log(object message, Object context)
 		{
-			Debug.Log(message.ToString().AppendNewLineEnd(), context);
+			Debug.Log(PrintMessage(message.ToString(), context), context);
 		}
 
 		/// <summary>
@@ -58,7 +63,7 @@ namespace Bayhaksam.Unity.Logging
 		/// <param name="context">Context</param>
 		public static void LogError(object message, Object context)
 		{
-			Debug.LogError(message.ToString().AppendNewLineEnd(), context);
+			Debug.LogError(PrintMessage(message.ToString(), context), context);
 		}
 
 		/// <summary>
@@ -83,7 +88,7 @@ namespace Bayhaksam.Unity.Logging
 		/// <param name="args">Arguments</param>
 		public static void LogErrorFormat(Object context, string format, params object[] args)
 		{
-			Debug.LogError(string.Format(format, args).AppendNewLineEnd(), context);
+			Debug.LogError(PrintMessage(string.Format(format, args), context), context);
 		}
 
 		/// <summary>
@@ -131,7 +136,7 @@ namespace Bayhaksam.Unity.Logging
 		/// <param name="args">Arguments</param>
 		public static void LogFormat(Object context, string format, params object[] args)
 		{
-			Debug.Log(string.Format(format, args).AppendNewLineEnd(), context);
+			Debug.Log(PrintMessage(string.Format(format, args), context), context);
 		}
 
 		/// <summary>
@@ -154,7 +159,7 @@ namespace Bayhaksam.Unity.Logging
 		/// <param name="context">Context</param>
 		public static void LogWarning(object message, Object context)
 		{
-			Debug.LogWarning(message.ToString().AppendNewLineEnd(), context);
+			Debug.LogWarning(PrintMessage(message.ToString(), context), context);
 		}
 
 		/// <summary>
@@ -179,7 +184,17 @@ namespace Bayhaksam.Unity.Logging
 		/// <param name="args">Arguments</param>
 		public static void LogWarningFormat(Object context, string format, params object[] args)
 		{
-			Debug.LogWarning(string.Format(format, args).AppendNewLineEnd(), context);
+			Debug.LogWarning(PrintMessage(string.Format(format, args), context), context);
 		}
+		#endregion
+
+		#region Methods
+		static string PrintMessage(string message, Object context)
+		{
+			return !IsContextInfoWillBePrinted
+				? message.AppendNewLineEnd()
+				: message.AppendNewLineEnd().AppendNewLineEnd() + "ContextName: " + context.name.AppendNewLineEnd();
+		}
+		#endregion
 	}
 }
