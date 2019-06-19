@@ -62,7 +62,7 @@ namespace Bayhaksam.Unity.Behaviour
 
 		public bool IsRunning { get; private set; }
 
-		public float CurrentTime { get; private set; }
+		public float CurrentTime { get; set; }
 
 		public float Time { get; set; }
 		#endregion
