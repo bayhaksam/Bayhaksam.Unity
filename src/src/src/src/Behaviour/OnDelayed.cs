@@ -33,6 +33,8 @@ namespace Bayhaksam.Unity.Behaviour
 		#endregion
 
 		#region Properties
+		public bool IsCancelled { get; set; }
+
 		public float Seconds { get => this.seconds; set => this.seconds = value; }
 		#endregion
 
@@ -48,8 +50,15 @@ namespace Bayhaksam.Unity.Behaviour
 		#endregion
 
 		#region Public Methods
+		public void Cancel()
+		{
+			this.IsCancelled = true;
+			this.StopCoroutine(this.OnExecute());
+		}
+
 		public void Execute()
 		{
+			this.IsCancelled = false;
 			this.StartCoroutine(this.OnExecute());
 		}
 		#endregion
@@ -59,7 +68,10 @@ namespace Bayhaksam.Unity.Behaviour
 		{
 			yield return new WaitForSeconds(this.Seconds);
 
-			this.OnDelayedInvoked.Invoke();
+			if (!this.IsCancelled)
+			{
+				this.OnDelayedInvoked.Invoke();
+			}
 		}
 		#endregion
 	}
