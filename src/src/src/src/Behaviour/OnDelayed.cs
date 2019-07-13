@@ -7,7 +7,7 @@
 
 namespace Bayhaksam.Unity.Behaviour
 {
-	using System.Collections;
+	using Bayhaksam.Unity.Events;
 	using UnityEngine;
 	using UnityEngine.Events;
 
@@ -18,60 +18,91 @@ namespace Bayhaksam.Unity.Behaviour
 		float seconds = 1.0f;
 
 		[SerializeField]
+		bool invokeOnAwake;
+
+		[SerializeField]
 		bool invokeOnStart = true;
 
 		[SerializeField]
 		UnityEvent onDelayedInvoked;
+
+		[SerializeField]
+		FloatUnityEvent onTick;
+		#endregion
+
+		#region Fields
+		[SerializeField]
+		float currentSeconds;
 		#endregion
 
 		#region Unity Events
-		public UnityEvent OnDelayedInvoked
-		{
-			get => this.onDelayedInvoked;
-			set => this.onDelayedInvoked = value;
-		}
+		public FloatUnityEvent OnTick { get => this.onTick; set => this.onTick = value; }
+
+		public UnityEvent OnDelayedInvoked { get => this.onDelayedInvoked; set => this.onDelayedInvoked = value; }
 		#endregion
 
 		#region Properties
-		public bool IsCancelled { get; set; }
+		public bool IsRunning { get; set; }
 
 		public float Seconds { get => this.seconds; set => this.seconds = value; }
 		#endregion
 
 		#region Unity Methods
 		/// <inheritdoc/>
+		protected virtual void Awake()
+		{
+			if (this.invokeOnAwake)
+			{
+				this.Execute();
+			}
+		}
+
+		/// <inheritdoc/>
 		protected virtual void Start()
 		{
 			if (this.invokeOnStart)
 			{
-				this.StartCoroutine(this.OnExecute());
+				this.Execute();
+			}
+		}
+
+		/// <inheritdoc/>
+		protected virtual void Update()
+		{
+			if (this.IsRunning && this.currentSeconds > 0)
+			{
+				this.currentSeconds -= Time.deltaTime;
+				if (this.currentSeconds < 0)
+				{
+					this.currentSeconds = 0;
+					this.Cancel();
+					this.OnDelayedInvoked.Invoke();
+				}
+
+				this.OnTick.Invoke(this.currentSeconds);
 			}
 		}
 		#endregion
 
 		#region Public Methods
-		public void Cancel()
-		{
-			this.IsCancelled = true;
-			this.StopCoroutine(this.OnExecute());
-		}
+		public void Cancel() => this.IsRunning = false;
 
 		public void Execute()
 		{
-			this.IsCancelled = false;
-			this.StartCoroutine(this.OnExecute());
+			this.currentSeconds = this.Seconds;
+			this.IsRunning = true;
 		}
-		#endregion
 
-		#region Methods
-		protected virtual IEnumerator OnExecute()
+		public void ResetValues()
 		{
-			yield return new WaitForSeconds(this.Seconds);
+			this.IsRunning = false;
+			this.currentSeconds = this.Seconds;
+		}
 
-			if (!this.IsCancelled)
-			{
-				this.OnDelayedInvoked.Invoke();
-			}
+		public void Restart()
+		{
+			this.ResetValues();
+			this.IsRunning = true;
 		}
 		#endregion
 	}
