@@ -24,6 +24,9 @@ namespace Bayhaksam.Unity.Behaviour
 		bool invokeOnStart = true;
 
 		[SerializeField]
+		bool isInvokeNotSeconds = true;
+
+		[SerializeField]
 		UnityEvent onDelayedInvoked;
 
 		[SerializeField]
@@ -42,6 +45,12 @@ namespace Bayhaksam.Unity.Behaviour
 		#endregion
 
 		#region Properties
+		public bool IsInvokeNotSeconds
+		{
+			get => this.isInvokeNotSeconds;
+			set => this.isInvokeNotSeconds = value;
+		}
+
 		public bool IsRunning { get; set; }
 
 		public float Seconds { get => this.seconds; set => this.seconds = value; }
@@ -89,8 +98,19 @@ namespace Bayhaksam.Unity.Behaviour
 
 		public void Execute()
 		{
-			this.currentSeconds = this.Seconds;
-			this.IsRunning = true;
+			if (this.Seconds > 0)
+			{
+				this.currentSeconds = this.Seconds;
+				this.IsRunning = true;
+
+				return;
+			}
+
+			if (this.IsInvokeNotSeconds)
+			{
+				this.OnDelayedInvoked.Invoke();
+				this.OnTick.Invoke(0);
+			}
 		}
 
 		public void ResetValues()
